@@ -1,0 +1,206 @@
+﻿<Window x:Class="Translator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Background="{DynamicResource MaterialDesignPaper}"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+		xmlns:local="clr-namespace:Translator"
+        mc:Ignorable="d"
+		Height="450" Width="800"
+        Title="Word Template Translater" 
+		MinHeight="450" MinWidth="800"
+		WindowStyle	="SingleBorderWindow"
+		WindowStartupLocation="CenterScreen">
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="50"/>
+			<RowDefinition Height="*"/>
+			<RowDefinition Height="50"/>
+		</Grid.RowDefinitions>
+
+		<materialDesign:ColorZone
+			Mode="PrimaryDark"
+			VerticalAlignment="Center"
+			Height="50"
+			CornerRadius="10"
+			Grid.Row="0"
+			materialDesign:ShadowAssist.ShadowDepth="Depth3">
+			<StackPanel
+			Grid.Column="0"
+			Orientation="Horizontal"
+			VerticalAlignment="Center">
+				<materialDesign:ColorZone 
+					Mode="Dark"
+					CornerRadius="5"
+					Margin="8 4 0 4"
+					materialDesign:ShadowAssist.ShadowDepth="Depth1">
+					<Button
+						Grid.Column="0"
+						x:Name="Btn_OpenFolder"
+						Style="{StaticResource MaterialDesignFlatButton}"
+						ToolTip="Открыть список шаблонов"
+						Command="{Binding OpenFolderTemplate}"
+						>
+						<WrapPanel>
+							<TextBlock Text="Открыть"/>
+							<materialDesign:PackIcon 
+						Kind="Download" Height="20" Width="20"/>
+						</WrapPanel>
+					</Button>
+				</materialDesign:ColorZone>
+				<materialDesign:ColorZone
+				Mode="Dark"
+				materialDesign:ShadowAssist.ShadowDepth="Depth1"
+				MinWidth="250"
+				Margin="20 5"
+				CornerRadius="10">
+				<ComboBox
+			Grid.Row="0"
+			materialDesign:HintAssist.Hint="Список шаблонов"
+			materialDesign:HintAssist.Foreground="OrangeRed"
+			materialDesign:TextFieldAssist.UnderlineBrush="OrangeRed"
+			Margin="10 0"
+			Padding="10 7.5"
+			IsEditable="False"
+			materialDesign:HintAssist.HintOpacity=".42"
+			ItemsSource="{Binding MyTemplates}"
+			SelectedItem="{Binding SelectTemplate, Mode=TwoWay}">
+					<ComboBox.ItemTemplate>
+						<DataTemplate>
+								<TextBlock Text="{Binding Path=Name}"/>
+						</DataTemplate>
+					</ComboBox.ItemTemplate>
+				</ComboBox>
+				</materialDesign:ColorZone>
+				<materialDesign:ColorZone 
+					Mode="Dark"
+					CornerRadius="5"
+					Margin="8 4 0 4"
+					materialDesign:ShadowAssist.ShadowDepth="Depth1">
+					<Button
+						Grid.Column="0"
+						x:Name="Btn_LoadTemplate"
+						Style="{StaticResource MaterialDesignFlatButton}"
+						ToolTip="Загрузить шаблон"
+						>
+						<WrapPanel>
+							<TextBlock Text="Загрузить"/>
+							<materialDesign:PackIcon 
+						Kind="Download" Height="20" Width="20"/>
+						</WrapPanel>
+					</Button>
+				</materialDesign:ColorZone>
+			</StackPanel>
+		</materialDesign:ColorZone>
+		<materialDesign:ColorZone 
+						Mode="Standard"
+						CornerRadius="10"
+						HorizontalAlignment="Right"
+						Margin="8 4 0 4"
+						Grid.Row="0"
+						materialDesign:ShadowAssist.ShadowDepth="Depth1">
+			<StackPanel 
+					Orientation="Horizontal" 
+					HorizontalAlignment="Stretch"
+					FlowDirection="RightToLeft">
+				<Button
+					x:Name="Btn_Exit"
+					Style="{StaticResource MaterialDesignFlatButton}"
+					ToolTip="Закрыть"
+					HorizontalAlignment="Right"
+					Height="Auto"
+					Grid.Column="1"
+					Click="Btn_Exit_Click">
+					<materialDesign:PackIcon 
+					Kind="Power" Foreground="OrangeRed" Height="Auto" Width="35" 
+					VerticalAlignment="Center"/>
+				</Button>
+				<Button
+					x:Name="Btn_About"
+					Style="{StaticResource MaterialDesignFlatButton}"
+					ToolTip="Информация о программе"
+					Height="Auto"
+					Grid.Column="1"
+					Click="Btn_About_Click">
+					<materialDesign:PackIcon 
+							Kind="About" Height="Auto" Width="35" 
+							VerticalAlignment="Center"/>
+				</Button>
+				<Button
+					x:Name="Btn_Print"
+					Style="{StaticResource MaterialDesignFlatButton}"
+					ToolTip="Печать"
+					Height="Auto"
+					Grid.Column="1">
+					<materialDesign:PackIcon 
+							Kind="Printer" Height="Auto" Width="35" 
+							VerticalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+		</materialDesign:ColorZone>
+
+		<materialDesign:ColorZone
+		Mode="Standard"
+		VerticalAlignment="Stretch"
+		Grid.Row="1">
+			<Frame
+			Name="MainFrame" 
+			Source="BirthCertificate.xaml"
+			/>
+		</materialDesign:ColorZone>
+
+		<!--FOOTER-->
+		<materialDesign:ColorZone
+		Mode="Standard"
+		CornerRadius="10"
+		HorizontalAlignment="Right"
+		Margin="8 4 0 4"
+		Grid.Row="2"
+		materialDesign:ShadowAssist.ShadowDepth="Depth3">
+			<StackPanel 
+					Orientation="Horizontal" 
+					HorizontalAlignment="Stretch"
+					FlowDirection="LeftToRight">
+				<TextBox
+					x:Name="tb_Path"
+					MinWidth="150"
+					MaxWidth="450"
+					Margin="10 0"
+					Text="{Binding PathTemplate}"
+					materialDesign:HintAssist.Hint="Путь до схоранения">
+				</TextBox>
+				<Button
+					x:Name="btn_GetPath"
+					Margin="10 0"
+					>
+					Указать путь
+				</Button>
+				<Button
+					x:Name="Btn_Translate"
+					Style="{StaticResource MaterialDesignFlatButton}"
+					ToolTip="Перевести текст"
+					Height="Auto"
+					Grid.Column="1"
+					Click="Btn_Translate_Click">
+					<materialDesign:PackIcon 
+							Kind="Translate" Height="Auto" 
+						Foreground="DarkKhaki" Width="35" 
+							VerticalAlignment="Center"/>
+				</Button>
+				<Button
+					x:Name="Btn_Save"
+					Style="{StaticResource MaterialDesignFlatButton}"
+					ToolTip="Печать"
+					Height="Auto"
+					Grid.Column="1"
+					Click="Btn_Save_Click">
+					<materialDesign:PackIcon 
+							Kind="ContentSave" Height="Auto"  Width="35" 
+							VerticalAlignment="Center"/>
+				</Button>
+			</StackPanel>
+		</materialDesign:ColorZone>
+	</Grid>
+</Window>

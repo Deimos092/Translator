@@ -1,0 +1,460 @@
+﻿<Page x:Class="Translator.Views.Registration_LawOject"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Translator.Views"
+	  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Background="{DynamicResource MaterialDesignPaper}"
+      TextElement.Foreground="{DynamicResource MaterialDesignBody}" 
+      Title="Собственность"
+	  Name="Собственность">
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition MinHeight="50"/>
+			<RowDefinition MinHeight="50"/>
+			<RowDefinition MinHeight="50"/>
+			<RowDefinition MinHeight="50"/>
+
+		</Grid.RowDefinitions>
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition MinWidth="150"/>
+			<ColumnDefinition MinWidth="150"/>
+			<ColumnDefinition MinWidth="150"/>
+			<ColumnDefinition MinWidth="150"/>
+			<ColumnDefinition MinWidth="150"/>
+		</Grid.ColumnDefinitions>
+
+		<!--0 ROW-->
+		<TextBox
+		Grid.Row="0"
+		Grid.Column="0"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+					Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+					Margin="20 10"
+					MinWidth="100"
+					x:Name="Name1">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+							Orientation="Horizontal"
+							Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+								Kind="HumanChild" />
+					<TextBlock>
+									Имя Собственика
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<DatePicker
+		Grid.Row="0"
+		Grid.Column="1"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+					Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+					Margin="20 10"
+					MinWidth="100"
+					x:Name="Name1_BirthDate">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+							Orientation="Horizontal"
+							Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+								Kind="HumanChild" />
+					<TextBlock>
+									Дата рождения
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</DatePicker>
+		<ComboBox
+		Grid.Row="0"
+		Grid.Column="2"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Name1_Gender">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Пол
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+			<ComboBoxItem>Male</ComboBoxItem>
+			<ComboBoxItem>Female</ComboBoxItem>
+		</ComboBox>
+		<TextBox
+		Grid.Row="0"
+		Grid.Column="3"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		x:Name="Name1_PermanentResidence">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Адрес проживания
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="0"
+		Grid.Column="4"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		x:Name="Name1_PlaceBirth">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Место рождения
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+
+		<!--1 ROW-->
+		<TextBox
+		Grid.Row="1"
+		Grid.Column="0"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Name1_PasSerial">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Серия паспорта
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="1"
+		Grid.Column="1"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Name1_PasNumber">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Номер паспорта
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="1"
+		Grid.Column="2"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		x:Name="Name1_PasIssued">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Место выдачи
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<DatePicker
+		Grid.Row="1"
+		Grid.Column="3"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Name1_PasIssuedDate">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Дата выдачи
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</DatePicker>
+		<TextBox
+		Grid.Row="1"
+		Grid.Column="4"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Name1_Unitcode">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Код
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+
+		<!--2 ROW-->
+		<DatePicker
+		Grid.Row="2"
+		Grid.Column="0"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Date_Issue">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Дата документа
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</DatePicker>
+		<ComboBox 
+		Grid.Row="2"
+		Grid.Column="1"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Type_Right">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Вид собственности
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+			<ComboBoxItem>Own</ComboBoxItem>
+			<ComboBoxItem>Common ownership, share in the right 1/2</ComboBoxItem>
+			<ComboBoxItem>Common ownership, share in the right 1/3</ComboBoxItem>
+			<ComboBoxItem>Common ownership, share in the right 1/4</ComboBoxItem>
+		</ComboBox>
+		<TextBox
+		Grid.Row="2"
+		Grid.Column="2"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		MaxWidth="300"
+		x:Name="Doc_Ground">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Документ основания
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="2"
+		Grid.Column="3"
+		Grid.ColumnSpan="2"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		x:Name="Object_Right">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+						Kind="HumanChild" />
+					<TextBlock>
+						Права на Обьект
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+
+		<!--3 ROW-->
+		<TextBox
+		Grid.Row="3"
+		Grid.Column="0"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		MaxWidth="300"
+		x:Name="LO_StateReg">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Область Регистрации
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="3"
+		Grid.Column="1"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		AcceptsReturn="True"
+		TextWrapping="Wrap"
+		Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+		Margin="20 0"
+		MinWidth="100"
+		x:Name="Object_Addres">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+						Kind="HumanChild" />
+					<TextBlock>
+						Адрес обьекта
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="3"
+		Grid.Column="2"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="Object_Cadastar">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="HumanChild" />
+					<TextBlock>
+						Номер Кадастра Обьекта
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="3"
+		Grid.Column="3"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="LO_Registrator">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="RegisteredTrademark" />
+					<TextBlock>
+						Регистратор
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+		<TextBox
+		Grid.Row="3"
+		Grid.Column="4"
+		VerticalAlignment="Center"
+		HorizontalAlignment="Stretch"
+		Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+		Margin="20 10"
+		MinWidth="100"
+		x:Name="LO_Identificator">
+			<materialDesign:HintAssist.Hint>
+				<StackPanel
+				Orientation="Horizontal"
+				Margin="-2 0 0 0">
+					<materialDesign:PackIcon
+					Kind="RegistrationMark"/>	  
+					<TextBlock>
+						Индентификатор
+					</TextBlock>
+				</StackPanel>
+			</materialDesign:HintAssist.Hint>
+		</TextBox>
+
+	</Grid>
+</Page>
