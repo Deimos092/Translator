@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Translator.Views
+namespace Translator.Owner
 {
     /// <summary>
-    /// Логика взаимодействия для Page_BirthCertificate.xaml
+    /// Interaction logic for Owner.xaml
     /// </summary>
-    public partial class Page_BirthCertificate : Page
+    public partial class Owner : UserControl
     {
-        public Page_BirthCertificate()
+        public Owner()
         {
             InitializeComponent();
         }

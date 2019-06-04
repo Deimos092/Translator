@@ -34,7 +34,7 @@ namespace Translator.Models
 				_Application = new Word.Application();
 				_Document = _Application.Documents.Add(ref _PathToTemplate , ref _missingObj , ref _missingObj , ref _missingObj);
 			}
-			catch ( Exception ex )
+			catch ( Exception )
 			{
 				_Document.Close(ref _falseObj , ref _missingObj , ref _missingObj);
 				_Application.Quit(ref _missingObj , ref _missingObj , ref _missingObj);
@@ -52,7 +52,7 @@ namespace Translator.Models
 				_Document.SaveAsQuickStyleSet(_PathToTemplate);
 				GetCloseDocument();
 			}
-			catch(Exception ex)
+			catch(Exception)
 			{
 				_Document.Close(ref _falseObj , ref _missingObj , ref _missingObj);
 				_Application.Quit(ref _missingObj , ref _missingObj , ref _missingObj);

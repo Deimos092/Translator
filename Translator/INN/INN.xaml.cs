@@ -13,16 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Translator.Views
+namespace Translator.INN
 {
-	/// <summary>
-	/// Interaction logic for Registration_LawOject.xaml
-	/// </summary>
-	public partial class Registration_LawOject : Page
-	{
-		public Registration_LawOject()
-		{
-			InitializeComponent();
-		}
-	}
+    /// <summary>
+    /// Interaction logic for INN.xaml
+    /// </summary>
+    public partial class INN : UserControl
+    {
+        public INN()
+        {
+            InitializeComponent();
+        }
+    }
 }

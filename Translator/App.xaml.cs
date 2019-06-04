@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
 using System.Linq;
-using System.Threading.Tasks;
 using System.Windows;
+using Translator.Utils;
+using Translator.ViewModels;
 
 namespace Translator
 {
@@ -13,5 +11,16 @@ namespace Translator
 	/// </summary>
 	public partial class App : Application
 	{
-	}
+        private void Application_Startup(object sender, StartupEventArgs e)
+        {
+            var mainWindow = new MainWindow();
+
+            var modules = ReflectionHelper.CreateAllInstancesOf<ITemplate>();
+
+            var vm = new MainViewModel(modules);
+            mainWindow.DataContext = vm;
+            mainWindow.Closing += (s, args) => vm.SelectTemplate.Deactivate();
+            mainWindow.Show();
+        }
+    }
 }

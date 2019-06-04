@@ -23,10 +23,6 @@ E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\MainWindow.g.cs
 E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\MainWindow.baml
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\Caliburn.Core.dll
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\Caliburn.PresentationFramework.dll
-E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\BirthCertificate.g.cs
-E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\Registration_LawOject.g.cs
-E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\BirthCertificate.baml
-E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Views\Registration_LawOject.baml
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\CommonServiceLocator.dll
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.dll
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.Extras.dll
@@ -38,3 +34,9 @@ E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.Extr
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.Extras.xml
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.Platform.pdb
 E:\Programming\C#\MyProg\Translator\Translator\bin\Debug\GalaSoft.MvvmLight.Platform.xml
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\BirthCertificate\Birth_Certificate.g.cs
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Owner\Owner.g.cs
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\BirthCertificate\Birth_Certificate.baml
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\Owner\Owner.baml
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\INN\INN.g.cs
+E:\Programming\C#\MyProg\Translator\Translator\obj\Debug\INN\INN.baml

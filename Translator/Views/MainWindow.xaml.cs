@@ -28,8 +28,6 @@ namespace Translator
 		public MainWindow()
 		{
 			InitializeComponent();
-
-			DataContext = new MainViewModel();
 		}
 
 		private void Button_MouseEnter( object sender , MouseEventArgs e )
