@@ -167,6 +167,7 @@
                     Grid.Column="1"
                     Height="Auto"
                     Click="Btn_Translate_Click"
+                    Command="{Binding TranslateCommand}"
                     Style="{StaticResource MaterialDesignFlatButton}"
                     ToolTip="Перевести текст">
                     <materialDesign:PackIcon

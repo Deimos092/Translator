@@ -30,7 +30,10 @@ namespace Translator.ViewModels
             }
         }
 		public ObservableCollection<WordTemplate> MyTemplates { get; set; }
+
 		private DataWordTemplate DataWord { get; set; }
+        private RelayCommand TranslateCommand { get; set; }
+
         public List<ITemplate> Templates { get; private set; }
         public ITemplate SelectTemplate
         {
@@ -47,6 +50,7 @@ namespace Translator.ViewModels
                         selectedTemplate.Deactivate();
                     }
                     selectedTemplate = value;
+                    selectedTemplate.RelayCommand = TranslateCommand;
                     OnPropertyChanged("SelectTemplate");
                     OnPropertyChanged("UserInterface");
                 }
@@ -60,7 +64,6 @@ namespace Translator.ViewModels
                 return SelectTemplate.UserInterface;
             }
         }
-        public List<string> NamePagesList { get; set; }
 		public string PathTemplate
 		{
 			get { return _selectedPath; }
@@ -69,8 +72,7 @@ namespace Translator.ViewModels
 				OnPropertyChanged("PathTemplate");
 			}
 		}
-		public ICommand OpenFolderTemplate { get; set; }
-		public ICommand LoadSelectWordTemplate { get; set; }
+		public RelayCommand OpenFolderTemplate { get; set; }
 		private void OpenFolderAndLoadTemplate()
 		{
 			FileDialogViewModel DialogViewModel = new FileDialogViewModel();
@@ -82,10 +84,6 @@ namespace Translator.ViewModels
 			
 			PathTemplate = DialogViewModel.FileName;
 			DataWord = new DataWordTemplate(PathTemplate);
-
-			NamePagesList = new List<string>();
-			foreach ( var name in DataWord.GetWordsList(PathTemplate) )
-				NamePagesList.Add(name.Name);
 
 			MyTemplates = new ObservableCollection<WordTemplate>(DataWord.GetWordsList(PathTemplate));
 			OnPropertyChanged("MyTemplates");

@@ -106,6 +106,7 @@
     <Compile Include="Owner\OwnerView.cs" />
     <Compile Include="Utils\FileService.cs" />
     <Compile Include="Utils\ITemplates.cs" />
+    <Compile Include="Utils\MicrosoftTransater.cs" />
     <Compile Include="Utils\NavigateArgs.cs" />
     <Compile Include="Utils\ReflectionHelper.cs" />
     <Compile Include="Utils\RelayCommand.cs" />

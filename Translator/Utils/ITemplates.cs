@@ -8,6 +8,8 @@ namespace Translator.Utils
     {
         string Name { get; }
         UserControl UserInterface { get; }
+        
+        RelayCommand RelayCommand { get; set; }
         void Deactivate();
     }
 }

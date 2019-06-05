@@ -5,13 +5,15 @@ using System.Windows.Controls;
 
 namespace Translator
 {
-    abstract class ModuleBase : ITemplate
+    abstract class TemplateBase : ITemplate
     {
         private UserControl view;
 
         protected abstract UserControl CreateViewAndViewModel();
 
         public abstract string Name { get; }
+
+        public abstract RelayCommand RelayCommand { get; set; }
 
         public UserControl UserInterface
         {

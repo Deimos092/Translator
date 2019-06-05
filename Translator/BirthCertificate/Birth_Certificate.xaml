@@ -34,7 +34,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding ChildName, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="HumanChild" />
@@ -52,7 +53,9 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintDatePicker}">
+            SelectedDateFormat="Short"
+            Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+            Text="{Binding ChildBirth, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="DateRange" />
@@ -70,7 +73,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding ChildPlaceBirth, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="MapMarkerRadius" />
@@ -91,7 +95,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Name1P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="HumanMale" />
@@ -110,7 +115,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Nationality1P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="AccountQuestionMark" />
@@ -129,7 +135,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Citizen1P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Passport" />
@@ -149,7 +156,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Name2P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="HumanMale" />
@@ -167,7 +175,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Nationality2P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="AccountQuestionMark" />
@@ -185,7 +194,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Citizen2P, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Passport" />
@@ -206,7 +216,8 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding ActNumber, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="Numeric" />
@@ -225,7 +236,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintDatePicker}">
+            SelectedDateFormat="Short"
+            Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+            Text="{Binding ActDate, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="DateRange" />
@@ -244,7 +257,9 @@
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
             materialDesign:HintAssist.Foreground="LightGray"
-            Style="{StaticResource MaterialDesignFloatingHintDatePicker}">
+            SelectedDateFormat="Short"
+            Style="{StaticResource MaterialDesignFloatingHintDatePicker}"
+            Text="{Binding DateIssue, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="DateRange" />
@@ -266,6 +281,7 @@
             VerticalAlignment="Center"
             AcceptsReturn="True"
             Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+            Text="{Binding PlaceRegistration, Mode=TwoWay}"
             TextWrapping="Wrap">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
@@ -286,6 +302,7 @@
             VerticalAlignment="Center"
             AcceptsReturn="True"
             Style="{StaticResource MaterialDesignFilledTextFieldTextBox}"
+            Text="{Binding PlaceRegistration2, Mode=TwoWay}"
             TextWrapping="Wrap">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
@@ -304,7 +321,8 @@
             Margin="20,10"
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            Style="{StaticResource MaterialDesignFloatingHintTextBox}">
+            Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+            Text="{Binding Registrator, Mode=TwoWay}">
             <materialDesign:HintAssist.Hint>
                 <StackPanel Margin="-2,0,0,0" Orientation="Horizontal">
                     <materialDesign:PackIcon Kind="RegisteredTrademark" />
