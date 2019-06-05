@@ -14,7 +14,12 @@ namespace Translator.Owner
         {
             return new Owner() { DataContext = new Owner() };
         }
-      
+
+        public override RelayCommand RelayCommand
+        {
+            get => throw new NotImplementedException();
+            set => throw new NotImplementedException();
+        }
         public override string Name
         {
             get { return "Собственность"; }
